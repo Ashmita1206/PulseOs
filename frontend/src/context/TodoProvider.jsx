@@ -11,7 +11,7 @@ const TodoProvider = ({ children }) => {
 
   // GET todos
   const fetchTodos = async () => {
-    const res = await API.get('/todos');
+    const res = await API.get('api/todos');
     console.log('Backend Response:', res.data);
     settodos(res.data);
   };
@@ -19,20 +19,20 @@ const TodoProvider = ({ children }) => {
   // ADD TODo
   const addTodo = async (title) => {
     if (!title) return;
-    await API.post('/todos', { title });
+    await API.post('api/todos', { title });
     fetchTodos();
   };
 
   // Delete
   const deleteTodo = async (id) => {
-    await API.delete(`/todos/${id}`);
+    await API.delete(`api/todos/${id}`);
     toast.success('Todo Deleted');
     fetchTodos();
   };
 
   const updateTodo = async (id, title) => {
     if (!title) return;
-    await API.patch(`/todos/${id}`, { title });
+    await API.patch(`api/todos/${id}`, { title });
     toast.success('Todo Updated');
     fetchTodos();
   };

@@ -72,7 +72,7 @@ const Create = () => {
         <div className="flex items-center justify-center gap-2">
           <input
             {...register('title', { required: 'Title can not be empty' })}
-            className="p-2 border-b active:text-blue-600 w-full text-2xl font-thin outline-0"
+            className="p-2 border-b text-blue-950 active:text-blue-600 w-full text-2xl font-thin outline-0"
             // Removed two-way binding.
             // onChange={(e) => settitle(e.target.value)}
             // value={title}

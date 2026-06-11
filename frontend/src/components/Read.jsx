@@ -77,10 +77,11 @@ const Read = () => {
               </>
             ) : (
               <>
-                <div className="shadow-md shadow-cyan-400 p-1.5 hover:-translate-y-2 transition duration-300">
+                <div className="shadow-md shadow-amber-400 p-1.5 hover:-translate-y-2 transition duration-300">
                   {todo.title}
                 </div>
                 <button
+                  className='hover:text-amber-400'
                   onClick={() => {
                     setEditId(id);
                     setValue('title', todo.title);
@@ -88,7 +89,9 @@ const Read = () => {
                 >
                   Update
                 </button>
-                <button onClick={() => deleteTodo(id)}>Delete</button>
+                <button className='hover:text-amber-400-400' onClick={() => deleteTodo(id)}>
+                  Delete
+                </button>
               </>
             )}
           </li>

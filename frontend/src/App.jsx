@@ -36,9 +36,9 @@ const App = () => {
   return (
     <div
       className="text-white flex flex-col justify-start items-center gap-10 w-screen h-screen bg-linear-to-tr
-from-[#95d071] from-0%
+from-[#e4e6e3] from-0%
 via-cyan-200 via-50%
-to-[#d1e452] to-90% p-10 "
+to-[#f8f8f4] to-90% p-10 "
     >
       {/* This all now goes to create component */}
       {/* <h1>Create Tasks</h1>
